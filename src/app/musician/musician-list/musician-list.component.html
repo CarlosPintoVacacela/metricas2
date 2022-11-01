@@ -1,0 +1,17 @@
+<div class="container musicians p-5">
+  <div class="col-4 col-sm-12">
+    <h1 i18n>Músicos</h1>
+    <div *ngIf="selected">
+      <app-musician-detail [musicianDetail]="selectedMusician"></app-musician-detail>
+    </div>
+    <div class="card" style="width: 18rem;" *ngFor="let m of musicians">
+        <img class="card-img-top rounded-circle"  alt="{{m.name}} en e28" src="{{m.image}}" data-holder-rendered="true">
+      <div class="card-body">
+        <a (click)="onSelected(m)">
+          <h1 class="card-title">{{m.name}}</h1>
+
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

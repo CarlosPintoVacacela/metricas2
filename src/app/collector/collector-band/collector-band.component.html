@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class=" p-3 contenedorBanda">
+    <div class="form-group mx-sm-3 mb-2 label">
+      <label for="album"> Band* </label>
+      <select [(ngModel)]="band" name="miselect" aria-label="Seleccione una banda" class="form-control">
+        <option [ngValue]="item" *ngFor="let item of bands">{{item.name}}</option>
+      </select>
+    </div>
+    <form [formGroup]="clientForm" (ngSubmit)="!clientForm.invalid && createCollectorBand(clientForm.value)">
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="name" i18n> Nombre* </label>
+        <input novalidate id="name" class="form-control" formControlName="name" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            clientForm.get('name').hasError('required') &&
+            clientForm.get('name').touched
+          ">
+          Nombre Requerido
+        </div>
+      </div>
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="image" i18n> Imagen* </label>
+        <input type="file" novalidate id="image" class="form-control" formControlName="image" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            clientForm.get('image').hasError('required') &&
+            clientForm.get('image').touched
+          ">
+          Imagen requerida
+        </div>
+      </div>
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="description"> Descripcion* </label>
+        <textarea novalidate id="description" class="form-control" formControlName="description"></textarea>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            clientForm.get('description').hasError('required') &&
+            clientForm.get('description').touched
+          ">
+          Descripcion requerida
+        </div>
+      </div>
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="creationDate" i18n> Fecha Creación* </label>
+        <input type="datetime-local" novalidate id="creationDate" class="form-control" formControlName="creationDate" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            clientForm.get('creationDate').hasError('required') &&
+            clientForm.get('creationDate').touched
+          ">
+          Fecha Creación requerida
+        </div>
+      </div>
+      <div class="row m-3 small">
+        <p>* Campos Requeridos</p>
+      </div>
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!clientForm.valid">
+          Asignar
+        </button>
+        <button type="button" class="btn btn-danger ml-3" (click)="cancelBand()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

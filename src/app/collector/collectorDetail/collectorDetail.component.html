@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{collectorDetail.name}}</p>
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" (click)="onClickPerf()" class="btn btn-secondary" i18n>Artistas</button>
+    <button type="button" (click)="onClickDet()" class="btn btn-secondary" i18n>Asignar Album</button>
+    <button type="button" (click)="onClickAsign()" class="btn btn-secondary" i18n>Asignar Musicos</button>
+  </div>
+  <div class="contenedor">
+    <div *ngIf="btnDetail">
+      <app-collector-album [collector]="collectorDetail"></app-collector-album>
+    </div>
+    <div *ngIf="collectorDetail.favoritePerformers.length > 0 ">
+      <div *ngIf="btnPerf">
+        <app-collector-performers [collectorPerformers]="collectorDetail.favoritePerformers"></app-collector-performers>
+      </div>
+    </div>
+    <div *ngIf="btnAsign">
+      <app-collector-performer [collector]="collectorDetail"></app-collector-performer>
+    </div>
+  </div>
+
+
+
+</div>

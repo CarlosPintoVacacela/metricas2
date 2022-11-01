@@ -1,0 +1,16 @@
+img{
+  width: 18rem;
+  height: 18rem;
+  padding: .85rem;
+  object-fit: cover;
+}
+.card{
+  align-items: center;
+  background-color: #181D22;
+  border: none;
+  border-radius: 0;
+}
+.card-title{
+  font-size: 1rem;
+  color: #f1f1f1;
+}

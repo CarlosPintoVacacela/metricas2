@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <div class="p-3">
+    <div id="tituloAlbum" class="h4" i18n>Asignar Álbum</div>
+    <form [formGroup]="albumForm" (ngSubmit)="!albumForm.invalid && createAlbum(albumForm.value)">
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="name" i18n> Nombre* </label>
+        <input novalidate id="nombre" class="form-control" formControlName="name" placeholder="Nombre" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            albumForm.get('name').hasError('required') &&
+            albumForm.get('name').touched
+          ">
+          Nombre Requerido
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="cover" i18n> Portada* </label>
+        <input novalidate id="cover" class="form-control" formControlName="cover" placeholder="Portada" type="file" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            albumForm.get('cover').hasError('required') &&
+            albumForm.get('cover').touched
+          ">
+          Portada Requerido
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="releaseDate" i18n> Lanzamiento* </label>
+        <input novalidate id="releaseDate" class="form-control" formControlName="releaseDate" placeholder="Lanzamiento"
+          type="datetime-local" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            albumForm.get('releaseDate').hasError('required') &&
+            albumForm.get('releaseDate').touched
+          ">
+          Lanzamiento Requerido
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="description" i18n> Descripcion* </label>
+        <textarea novalidate id="description" class="form-control" formControlName="description"
+          placeholder="Descripcion"></textarea>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            albumForm.get('description').hasError('required') &&
+            albumForm.get('description').touched
+          ">
+          Descripcion Requerido
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="genre" i18n> Género* </label>
+        <select name="genre" aria-label="Seleccione un estado" id="genre" class="form-control" formControlName="genre">
+          <option>Classical</option>
+          <option>Salsa</option>
+          <option>Rock</option>
+          <option>Folk</option>
+        </select>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="recordLabel" i18n> Disquera* </label>
+        <select name="recordLabel" aria-label="Seleccione un estado" id="recordLabel" class="form-control"
+          formControlName="recordLabel">
+          <option>Sony</option>
+          <option>Music</option>
+          <option>EMI</option>
+          <option>Discos Fuentes</option>
+          <option>Elektra</option>
+          <option>Fania Records</option>
+        </select>
+      </div>
+
+      <div class="row m-3 small">
+        <p i18n>* Campos Requeridos</p>
+      </div>
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!albumForm.valid">
+          Asignar
+        </button>
+        <button type="button" class="btn btn-danger ml-3" (click)="cancelAlbum()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

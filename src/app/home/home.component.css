@@ -1,0 +1,33 @@
+div.textoHome {
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-right: 5%;
+}
+
+button {
+  margin: 2%;
+}
+
+.home-btn {
+  text-align: center;
+
+}
+
+.btn-info{
+  background-color:#5952D1;
+  border-color: #5952D1;
+}
+
+.btn-outline-info {
+  color: #E169C9;
+  border-color: #E169C9;
+}
+
+.btn-outline-info:hover {
+  background-color:#E169C9;
+  color: #f1f1f1;
+  border-color: #E169C9;
+}

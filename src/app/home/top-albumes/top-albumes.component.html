@@ -1,0 +1,17 @@
+<div class="content center">
+  <div class="row">
+    <h2 i18n>TOP 5 Albumes</h2>
+  </div>
+  <div class="row">
+    <div class="col-2 cont p-10 center" *ngFor="let album of albumes">
+      <div class="card" style="width: 8rem;">
+        <img class="card-img-top" src='{{album.cover}}' alt="Card image cap">
+        <div class="card-body">
+          <div class="card-title h4">{{album.name}}</div>
+          <p class="card-text">{{album.genre}}</p>
+          <p class="card-text">{{album.recordLabel}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+.e28-content {
+  background-color: #282F39;
+  color: #f1f1f1;
+  display: flex;
+  font-family: 'Roboto Condensed', sans-serif;
+  min-height: 700px;
+
+}
+
+.footer {
+  background-color: #181D22;
+  color: #f1f1f1;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+}
+
+.navbar,
+.nav {
+  background-color: #181D22;
+}
+
+.navbar form {
+  width: 50%;
+}
+
+.input-group {
+  background-color: #fff;
+  border-radius: 0.875rem;
+}
+
+.input-group input {
+  border-radius: 0.875rem;
+}
+
+.form-control {
+  border: 0;
+}
+
+.user-avatar {
+  border-radius: 5rem;
+  background-color: #f1f1f1;
+}
+
+.user-avatar>svg {
+  color: #5952D1;
+  padding: 5%;
+}
+
+.nav {
+  width: 280px;
+  text-align: center;
+}
+
+.nav a {
+  color: #f1f1f1;
+}
+
+.nav a.active {
+  background-color: #5a52d1;
+}
+
+.nav-item {
+  height: 60px;
+  font-size: 1.125rem;
+}

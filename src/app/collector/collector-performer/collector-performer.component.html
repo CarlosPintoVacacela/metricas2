@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class=" p-3">
+    <div id="tituloMusico" class="h4" i18n>Asignar Artista</div>
+    <div class="contenedorRadio">
+      <div class="form-check">
+        <input class="form-check-input" (change)="changeSelector(1)" name="flexRadioDefault" type="radio"
+          id="flexRadioDefault1" checked>
+        <label class="form-check-label" for="flexRadioDefault1" i18n>
+          Musicos
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" (change)="changeSelector(2)" name="flexRadioDefault" type="radio"
+          id="flexRadioDefault2">
+        <label class="form-check-label" for="flexRadioDefault2" i18n>
+          Bandas
+        </label>
+      </div>
+    </div>
+    <div>
+      <div *ngIf="selected==1">
+        <app-collector-musician [collector]="collector"></app-collector-musician>
+      </div>
+      <div *ngIf="selected==2">
+        <app-collector-band [collector]="collector"></app-collector-band>
+      </div>
+    </div>
+  </div>
+</div>

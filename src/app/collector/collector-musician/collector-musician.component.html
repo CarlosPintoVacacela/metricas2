@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="p-3 contenedorMusicos">
+    <div class="form-group mx-sm-3 mb-2 label">
+      <label for="album" i18n> Músico* </label>
+      <select [(ngModel)]="musico" name="selectMusicos" aria-label="Seleccione un músico" id="selectMusicos"
+        class="form-control">
+        <option [ngValue]="item" *ngFor="let item of musicos">{{item.name}}</option>
+      </select>
+    </div>
+    <div class="row m-3 btnAsigMusic">
+      <button type="submit" class="btn btn-success" (click)="asignarMusico()" i18n>
+        Asignar
+      </button>
+      <button type="button" class="btn btn-danger ml-3" (click)="cancelMusico()" i18n>
+        Cancelar
+      </button>
+    </div>
+  </div>
+</div>

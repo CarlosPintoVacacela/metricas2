@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="p-3">
+    <div id="tituloAlbum" class="h4" i18n>Asignar Álbum</div>
+    <div class="form-group mx-sm-3 mb-2 label">
+      <label for="album"> Album* </label>
+      <select [(ngModel)]="idAlbum" aria-label="Seleccione un album" name="miselectAlbum" id="miselectAlbum"
+        class="form-control">
+        <option [ngValue]="item" *ngFor="let item of albums">{{item.name}}</option>
+      </select>
+    </div>
+    <form [formGroup]="clientForm" (ngSubmit)="!clientForm.invalid && createClient(clientForm.value)">
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="price" i18n> Precio* </label>
+        <input type="number" min="0" novalidate id="price" class="form-control" formControlName="price"
+          placeholder="Precio" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            clientForm.get('price').hasError('required') &&
+            clientForm.get('price').touched
+          ">
+          Precio Requerido
+        </div>
+      </div>
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="status" i18n> Status* </label>
+        <select name="miselectStatus" aria-label="Seleccione un estado" id="miselectStatus" class="form-control"
+          formControlName="status">
+          <option>Active</option>
+          <option>Inactive</option>
+        </select>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            clientForm.get('status').hasError('required') &&
+            clientForm.get('status').touched
+          ">
+          Status requerido
+        </div>
+      </div>
+      <div class="row m-3 small">
+        <p>* Campos Requeridos</p>
+      </div>
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!clientForm.valid">
+          Asignar
+        </button>
+        <button type="button" class="btn btn-danger ml-3" (click)="cancelAlbum()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

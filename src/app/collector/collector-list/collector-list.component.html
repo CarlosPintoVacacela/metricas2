@@ -1,0 +1,46 @@
+<div class="container" id="contenedorListaCollectors">
+  <div class="col-12">
+
+    <h1 id="tituloListaColeccionistas" i18n>Lista de Coleccionistas</h1>
+
+    <br>
+    <table summary="Lista Coleccionistas" class="table center">
+
+      <thead>
+        <tr>
+
+          <th class="h4 collectorTableTh-coleccionista" id="collectorTableTh-coleccionista" colspan="2" i18n>
+            Coleccionista
+          </th>
+          <th class="h4 collectorTableTh-albumes" id="collectorTableTh-albumes" i18n>Albumes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of collectors">
+          <td>
+            <button (click)="onSelected(c)" title="Desplegar" class="btn btn-primary dropdown-toggle btn-sm button"
+              type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" i18n>
+              Detalle</button>
+          </td>
+          <td>
+
+            {{c.name}}
+
+
+          </td>
+          <td>
+            <span class="badge rounded-pill button" style="color:white;">{{c.collectorAlbums.length}}</span>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+    <div class="row p-2">
+      <div class="col border">
+        <div *ngIf="selected">
+          <app-collectorDetail [collectorDetail]="selectedCollector"></app-collectorDetail>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="630d33522f4eadda9a5cd885545f6edc25eada5d" datatype="html">
+        <source>Músicos</source>
+        <target>Musicians</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/musician/musician-list/musician-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="84f1ac2699643f4eae3a88012533542fb2277afe" datatype="html">
+        <source>Fecha de nacimiento: <x id="INTERPOLATION" equiv-text="{{ musicianDetail.birthDate.replace(&apos;/Date(&apos;,&apos;&apos;).replace(&apos;)/&apos;,&apos;&apos;) | date:&quot;dd-MM-yyyy&quot; }}"/></source>
+        <target>Date of birth: <x id="INTERPOLATION" equiv-text="{{ musicianDetail.birthDate.replace(&apos;/Date(&apos;,&apos;&apos;).replace(&apos;)/&apos;,&apos;&apos;) | date:&quot;MM-dd-yyyy&quot; }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/musician/musician-detail/musician-detail.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="577f479cc2ed796795c6bd924f5b999ee5714a22" datatype="html">
+        <source>Total de premios según usuarios de e28.</source>
+        <target>Total awards by e28 users.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/musician/musician-detail/musician-detail.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="991b77e5de86e2222be7c12a1e1d464de45bf446" datatype="html">
+        <source>Premios</source>
+        <target>Prizes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/musician/musician-detail/musician-detail.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="630d33522f4eadda9a5cd885545f6edc25eada5d" datatype="html">
+        <source>Músicos</source>
+        <target>Musicians</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/musician/musician-list/musician-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="952d47d9d0b574b636b2ba5e8a3a12b948531ddc" datatype="html">
+        <source>TOP 5 Albumes</source>
+        <target>Top 5 Albums</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/top-albumes/top-albumes.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7b58538b1dd31df6643c09049be1550edbc8641e" datatype="html">
+        <source>Coleccionistas</source>
+        <target>Collectors</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2cc812f8063c52bebb2b9fae9308428ee6c00e17" datatype="html">
+        <source>Álbumes</source>
+        <target>Albums</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aa141f31781d69569951269ef32696003e6dd115" datatype="html">
+        <source>
+          El mejor lugar para intercambiar los vinilos que ya no usas
+          y adquirir los vinilos que más te gustan!
+        </source>
+    <target>The best place to trade and buy vinyls!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="656864832cc2c37106aaa75d9fe345bd879508c5" datatype="html">
+        <source>Iniciar Sesión</source>
+        <target>Sing In</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="07f02a09d042b4bb20cc957f2e8b3a46bb0b997c" datatype="html">
+        <source>Crear Cuenta</source>
+        <target>Sing Up</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

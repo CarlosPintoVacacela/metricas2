@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="p-3">
+    <div id="tituloAlbum" class="h4" i18n>Asignar Track</div>
+    <form [formGroup]="albumTrackForm" (ngSubmit)="!albumTrackForm.invalid && createAlbum(albumTrackForm.value)">
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="name" i18n> Nombre* </label>
+        <input novalidate id="name" class="form-control" formControlName="name" placeholder="Nombre" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        albumTrackForm.get('name').hasError('required') &&
+        albumTrackForm.get('name').touched
+          ">
+          Nombre Requerido
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2 label">
+        <label for="duration" i18n> Duración* </label>
+        <input novalidate id="duration" class="form-control" formControlName="duration" type="time"
+          placeholder="Duración" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        albumTrackForm.get('duration').hasError('required') &&
+        albumTrackForm.get('duration').touched
+          ">
+          Portada Requerido
+        </div>
+      </div>
+
+
+      <div class="row m-3 small">
+        <p i18n>* Campos Requeridos</p>
+      </div>
+      <div class="row m-3">
+        <button type="submit" class="btn btn-success" [disabled]="!albumTrackForm.valid" i18n>
+          Asignar
+        </button>
+        <button type="button" class="btn btn-danger ml-3" (click)="cancelAlbum()" i18n>
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

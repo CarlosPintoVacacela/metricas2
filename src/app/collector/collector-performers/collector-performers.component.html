@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="h4" i18n>Artistas Favoritos</div>
+
+  <div class="list-group lista" *ngFor="let c of collectorPerformers">
+
+    <a href="#" class="list-group-item list-group-item-action flex-column ">
+      <div class="row">
+
+        <div class="col-10 det">
+          <div class="d-flex w-100 ">
+            <a class="mb-1 nombre" routerLink="../../musicians/ist/">{{c.name}}</a>
+          </div>
+          <p class="mb-1 descp">{{c.description}}</p>
+          <div *ngIf="c.birthDate">
+            <small class="text-muted" i18n>Fecha de Nacimiento: {{c.birthDate}}</small>
+          </div>
+        </div>
+
+        <div class="col-2 det">
+          <img src="{{c.image}}" class="img-fluid" alt="quixote">
+        </div>
+
+      </div>
+
+
+    </a>
+
+
+  </div>
+</div>

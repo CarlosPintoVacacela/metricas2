@@ -1,0 +1,75 @@
+<testExecutions version="1">
+  <file path="src/app/collector/collector-performer/collector-performer.component.spec.ts">
+    <testCase name="CollectorPerformerComponent should create" duration="55"/>
+  </file>
+  <file path="src/app/collector/collector-musician/collector-musician.component.spec.ts">
+    <testCase name="CollectorMusicianComponent should create" duration="34"/>
+  </file>
+  <file path="src/app/home/top-albumes/top-albumes.component.spec.ts">
+    <testCase name="TopAlbumesComponent Should have an h2 tag" duration="41"/>
+    <testCase name="TopAlbumesComponent should create" duration="8"/>
+  </file>
+  <file path="src/app/collector/collector-list/collector-list.component.spec.ts">
+    <testCase name="CollectorListComponent should create" duration="23"/>
+    <testCase name="CollectorListComponent Should have a div tag" duration="17"/>
+    <testCase name="CollectorListComponent Should have an h1 tag" duration="22"/>
+  </file>
+  <file path="src/app/collector/collectorDetail/collectorDetail.component.spec.ts">
+    <testCase name="CollectorDetailComponent Should have a div tag" duration="30"/>
+    <testCase name="CollectorDetailComponent should create" duration="22"/>
+    <testCase name="CollectorDetailComponent Should have an p tag" duration="19"/>
+  </file>
+  <file path="src/app/collector/collector-band/collector-band.component.spec.ts">
+    <testCase name="CollectorBandComponent should create" duration="134"/>
+  </file>
+  <file path="src/app/collector/collector.service.spec.ts">
+    <testCase name="Service: Collector getPost() should return records which are Collector" duration="10"/>
+    <testCase name="Service: Collector should create service" duration="5"/>
+    <testCase name="Service: Collector getPost() should return 10 records" duration="9"/>
+    <testCase name="Service: Collector getAlbums() should return 10 records" duration="9"/>
+    <testCase name="Service: Collector getAlbums() should return records which are Album" duration="6"/>
+  </file>
+  <file path="src/app/collector/collector-performers/collector-performers.component.spec.ts">
+    <testCase name="CollectorPerformersComponent Should have an h5 tag" duration="42"/>
+    <testCase name="CollectorPerformersComponent Should have a div tag" duration="22"/>
+    <testCase name="CollectorPerformersComponent should create" duration="13"/>
+    <testCase name="CollectorPerformersComponent Should have a a tag" duration="18"/>
+  </file>
+  <file path="src/app/collector/collector-album/collector-album.component.spec.ts">
+    <testCase name="CollectorAlbumComponent should create" duration="61"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'front'" duration="94"/>
+    <testCase name="AppComponent should create the app" duration="23"/>
+  </file>
+  <file path="src/app/albumes/albumes-detallar/albumes-detallar.component.spec.ts">
+    <testCase name="AlbumesDetallarComponent should create" duration="28"/>
+  </file>
+  <file path="src/app/albumes/album.service.spec.ts">
+    <testCase name="Service: Album getAlbumes() should return 10 records" duration="6"/>
+    <testCase name="Service: Album getAlbumes() should return 0 records" duration="3"/>
+    <testCase name="Service: Album getAlbumes() should return id's of type number" duration="4"/>
+    <testCase name="Service: Album should return valid object" duration="4"/>
+  </file>
+  <file path="src/app/prizer/prizer-musician/prizer-musician.component.spec.ts">
+    <testCase name="PrizerMusicianComponent should create" duration="45"/>
+  </file>
+  <file path="src/app/musician/musician.service.spec.ts">
+    <testCase name="Service: Musician getMusician() should return 0 records" duration="3"/>
+    <testCase name="Service: Musician should ..." duration="2"/>
+    <testCase name="Service: Musician getMusician() should return 10 records" duration="3"/>
+  </file>
+  <file path="src/app/prizer/prizer.service.spec.ts">
+    <testCase name="Service: Prizer should create service" duration="6"/>
+  </file>
+  <file path="src/app/prizer/prizer-create/prizer-create.component.spec.ts">
+    <testCase name="PrizerCreateComponent should create" duration="77"/>
+  </file>
+  <file path="src/app/musician/musician-list/musician-list.component.spec.ts">
+    <testCase name="MusicianListComponent should create" duration="37"/>
+    <testCase name="MusicianListComponent Should have an h1 tag" duration="10"/>
+  </file>
+  <file path="src/app/musician/musician-detail/musician-detail.component.spec.ts">
+    <testCase name="MusicianDetailComponent should create m" duration="36"/>
+  </file>
+</testExecutions>

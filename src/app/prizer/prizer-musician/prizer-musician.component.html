@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="p-3">
+    <div class="form-group mx-sm-3 mb-2 label">
+      <label for="premio"> Premios* </label>
+      <select [(ngModel)]="prizerSelected" name="select premios" aria-label="Seleccione un premio" id="selectpremios"
+        class="form-control">
+        <option value="" disabled selected i18n>Seleccione un premio</option>
+        <option [ngValue]="item" *ngFor="let item of prizer">{{item.name}}</option>
+      </select>
+    </div>
+    <form [formGroup]="musicianForm" (ngSubmit)="!musicianForm.invalid && assignPrizer(musicianForm.value)">
+    <div class="form-group mx-sm-3 mb-2 label">
+      <label for="premiationDate" i18n> Fecha de premiación* </label>
+      <input type="date" novalidate id="premiationDate" class="form-control" formControlName="premiationDate" />
+      <div class="alert alert-danger alert-dismissible fade show mt-2" *ngIf="
+          musicianForm.get('premiationDate').hasError('required') &&
+          musicianForm.get('premiationDate').touched
+        " i18n>
+        Fecha de premiación requerida
+      </div>
+
+    <div class="row m-3 btnAsigMusic">
+      <button type="submit" class="btn btn-success" [disabled]="!musicianForm.valid" i18n>
+        Asignar
+      </button>
+      <button type="button" class="btn btn-danger ml-3" (click)="cancelPrizer()" i18n>
+        Cancelar
+      </button>
+    </div>
+  </div>
+    </form>
+</div>

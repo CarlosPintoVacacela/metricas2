@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="col-12">
+    <h1 i18n>Albumes</h1>
+    <app-albumes-crear></app-albumes-crear>
+    <table summary="Tabla de albumes creados en la aplicacion"class="table table-hover">
+      <thead>
+        <tr class="table-title">
+          <th id="thPortada" class="h5" i18n>Portada</th>
+          <th id="thId" class="h5" i18n>ID</th>
+          <th id="thNombre" class="h5" i18n>Nombre</th>
+          <th id="thGenero" class="h5" i18n>Genero</th>
+          <th id="thFecha" class="h5" i18n>Fecha</th>
+          <th id="thDisquera" class="h5" i18n>Casa Disquera</th>
+          <th id="thDetalle" class="h5" i18n>Detalle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let al of albumes">
+          <td>
+            <img src={{al.cover}} alt="Portada del álbum {{al.name}} de la disquera {{al.recordLabel}}">
+          </td>
+          <td>
+            {{ al.id }}
+          </td>
+          <td>
+            {{ al.name }}
+          </td>
+          <td>
+            {{ al.genre }}
+          </td>
+          <td>
+            {{ al.releaseDate.split('-')[0] }}
+          </td>
+          <td>
+            {{ al.recordLabel }}
+          </td>
+          <td>
+            <span class="link-detalle" (click)="onSelected(al)" i18n>Detalle</span>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+    <div *ngIf="selected">
+      <app-albumes-detallar [albumDetalle]="selectedAlbum"></app-albumes-detallar>
+    </div>
+  </div>
+</div>

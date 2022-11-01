@@ -1,0 +1,55 @@
+<div>
+  <div class="row">
+    <div class="col-6">
+      <table aria-describedby="Detalle  Album" class="table table-hover">
+        <thead>
+          <th id="thPortadaDetalle" i18n>Portada</th>
+          <th id="thDetalleDetalle" i18n>Detalle</th>
+        </thead>
+        <tbody>
+          <td style="width:20%">
+            <img src={{albumDetalle.cover}}
+              alt="Portada del álbum {{albumDetalle.name}} de la disquera {{albumDetalle.recordLabel}}">
+          </td>
+          <td>
+            <span i18n>id:</span> {{albumDetalle.id}}
+            <span i18n>Genero:</span> {{albumDetalle.genre}}
+            <span i18n>Nombre:</span> {{albumDetalle.name}}
+            <span i18n>Casa Disquera:</span> {{albumDetalle.recordLabel}}
+            <span i18n>Año:</span> {{albumDetalle.releaseDate.split('-')[0]}}
+          </td>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-6">
+      <h4 i18n>Artistas:</h4>
+      <div *ngFor="let per of albumDetalle.performers">
+        <p>{{per['name']}}</p>
+      </div>
+      <h4>Tracks:</h4>
+      <div *ngFor="let track of albumDetalle.tracks">
+        <table aria-describedby="Tracks Album">
+          <thead>
+            <th id="bl1"></th>
+            <th id="bl1"></th>
+          </thead>
+          <tbody>
+            <td>
+              {{track['name']}}
+            </td>
+            <td>
+              {{track['duration']}}
+            </td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row description-row">
+    <h4 i18n>Descripción:</h4>
+    <p>{{albumDetalle.description}}</p>
+  </div>
+  <div>
+    <app-album-track [albumSelected]="albumDetalle"></app-album-track>
+  </div>
+</div>

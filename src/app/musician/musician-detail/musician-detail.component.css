@@ -1,0 +1,44 @@
+.card{
+  background-color:#181D22;
+}
+.musician-detail{
+  display: flex;
+  align-items: center;
+}
+.musician-img img{
+  width: 16rem;
+  height: 16rem;
+  object-fit: cover;
+}
+td, th, .close > span{
+  color: #f1f1f1;
+}
+.modal-header, .modal-body{
+  background-color: #282F39;
+  color: #f1f1f1;
+}
+
+table button, table button:focus{
+  background-color: #5952D1;
+  border-color: #5952D1;
+}
+
+#premios-add, #premios-title{
+  border: 0 !important;
+}
+
+#premios-title{
+  font-weight: 500;
+  font-size: 1.75rem;
+  margin-bottom: .5rem;
+  line-height: 1.2;
+}
+
+#premios-add{
+  display: flex;
+  justify-content: space-around;
+}
+caption{
+  color: #f1f1f1;
+}
+

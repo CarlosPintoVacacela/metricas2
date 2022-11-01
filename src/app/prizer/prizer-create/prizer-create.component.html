@@ -1,0 +1,109 @@
+<div class="container-fluid">
+  <div class="p-3">
+    <div class="h4" i18n>Crear nuevo Premio</div>
+    <form
+      [formGroup]="prizerForm"
+      (ngSubmit)="!prizerForm.invalid && createPrizer(prizerForm.value)"
+    >
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="name" i18n> Nombre* </label>
+        <input
+          novalidate
+          id="name"
+          class="form-control"
+          formControlName="name"
+          placeholder="Nombre del Premio"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show mt-2"
+          *ngIf="
+            prizerForm.get('name').hasError('required') &&
+            prizerForm.get('name').touched
+          "
+          i18n>
+          El nombre es requerido
+        </div>
+        <div
+          class="alert alert-danger alert-dismissible fade show mt-2"
+          *ngIf="
+            prizerForm.get('name').hasError('minlength') &&
+            prizerForm.get('name').touched
+          "
+          i18n>
+          El nombre es muy corto. Debe tener al menos 2 caracteres.
+        </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="description" i18n> Descripción* </label>
+        <input
+          id="description"
+          type="text"
+          class="form-control"
+          formControlName="description"
+          placeholder="Descripción"
+        />
+
+        <div
+          class="alert alert-danger alert-dismissible fade show mt-2"
+          *ngIf="
+            prizerForm.get('description').hasError('required') &&
+            prizerForm.get('description').touched
+          "
+          i18n>
+          La Descripción es requerida
+        </div>
+        <div
+        class="alert alert-danger alert-dismissible fade show mt-2"
+        *ngIf="
+          prizerForm.get('description').hasError('minlength') &&
+          prizerForm.get('description').touched
+        "
+        i18n>
+        La Descripción es muy corto. Debe tener al menos 10 caracteres.
+      </div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="organization" i18n> Organización* </label>
+        <input
+          id="organization"
+          type="text"
+          class="form-control"
+          formControlName="organization"
+          placeholder="Organización"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show mt-2"
+          *ngIf="
+            prizerForm.get('organization').hasError('required') &&
+            prizerForm.get('organization').touched
+          "
+          i18n>
+          La Organización es requerida.
+        </div>
+      </div>
+
+      <div class="row m-3 small">
+        <p i18n>* Campo requerido</p>
+      </div>
+
+      <div class="row m-3">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!prizerForm.valid"
+          i18n>
+          Crear
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger ml-3"
+          (click)="cancelCreation()"
+          i18n>
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
